@@ -3,10 +3,18 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Added due to Heroku push error
+# Added due to Heroku push error / removed due to Ruby 4.0 error msg
+
+=begin
 group :production do
 	gem 'pg'
 end
+=end
+
+group :production, :staging do
+      gem 'pg'
+      gem 'rails_12factor'
+    end
 
 # Use sqlite3 as the database for Active Record (edited for Heroku, added to group)
 group :development, :test do
