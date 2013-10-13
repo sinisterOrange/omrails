@@ -15,8 +15,9 @@ group :production do
 end
 =end
 
-group :production do
+group :production, :staging do
       gem 'pg'
+      gem 'rails_12factor'
     end
 
 # Use sqlite3 as the database for Active Record (edited for Heroku, added to group)
