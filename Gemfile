@@ -11,11 +11,6 @@ group :production do
   gem 'rails_12factor'
 end
 
-group :development, :test do
-end
-
-group :assets do
-
 	# Use SCSS for stylesheets
 	gem 'sass-rails', '~> 4.0.0'
 
@@ -26,9 +21,9 @@ group :assets do
 	gem 'coffee-rails', '~> 4.0.0'
 
  	# added on 10/13 for video 8
-	gem 'bootstrap-sass', '~> 2.3.2.1'
+	# gem 'bootstrap-sass', '~> 2.3.2.1'
 
-end
+
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
