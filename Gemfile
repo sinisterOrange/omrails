@@ -4,7 +4,16 @@ ruby '1.9.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Added due to Heroku push error / removed due to Ruby 4.0 error msg
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+
+gem 'devise' #for forms
+gem 'simple_form' #layouts for forms
+
+gem 'protected_attributes' 
+#added after error running terminal "rails generate migration AddNameToUsers name:string"
+
+# declaring ruby version: Added due to Heroku push error / removed due to Ruby 4.0 error msg
 
 group :production do
 	gem 'pg'
@@ -27,14 +36,13 @@ group :assets do
 
 end
 
+
 # added on 10/13 for video 8 / edited to outside asset group
 gem 'bootstrap-sass', '~> 2.3.2.1'
 
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

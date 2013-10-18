@@ -1,17 +1,26 @@
-<div class="hero-unit">
+<% if user_signed_in? %>
+<!-- Checking login status on page load -->
 
-	<h1>Welcome to <i>OMR</i>, Sucka!</h1>
+	<h1>You're logged in!</h1>
 
-	<p>
-	You've found a test project for <%= link_to "One Month Railz", "http://onemonthrails.com" %>, check it out.
-	</p>
+<% else %>
 
-	<!-- ^ discarded code: <a href="http://onemonthrails.com">ONE MONTH RAILS</a> -->
+	<div class="hero-unit">
 
-	<p>
-		<%= link_to "Click here!!!", "http://onemonthrails.com", class: "btn btn-primary btn-large" %>
-	</p>
+		<h1>Welcome to <i>OMR</i>, Sucka!</h1>
 
-	<!-- ^^ BOOTSTRAP BUTTON ADDED -->
+		<p>
+		You've found a test project for <%= link_to "One Month Railz", "http://onemonthrails.com" %>, check it out.
+		</p>
 
-</div>
+		<!-- ^ discarded code: <a href="http://onemonthrails.com">ONE MONTH RAILS</a> -->
+
+		<p>
+			<%= link_to "Yet another login button, click it", new_user_registration_path, class: "btn btn-primary btn-large" %>
+		</p>
+
+		<!-- ^^ BOOTSTRAP BUTTON ADDED -->
+
+	</div>
+
+<% end %>	

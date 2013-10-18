@@ -13,6 +13,19 @@
 
 		<div class="container">
 		
+		<!-- Added per Devise gem instructions:
+
+Ensure you have flash messages in app/views/layouts/application.html.erb.
+     For example:
+
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+	-->
+
+		<% flash.each do |name, msg| %>
+			<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+		<% end %>
 		<%= yield %>
 
 		<%= render 'layouts/footer' %>
